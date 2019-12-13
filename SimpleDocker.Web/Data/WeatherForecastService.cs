@@ -13,7 +13,7 @@ namespace SimpleDocker.Web.Data {
 
     public class MyClient : HttpClient {
         public MyClient() {
-            BaseAddress = new Uri("https://10.128.0.3:5001/");
+            BaseAddress = new Uri("https://34.70.167.135:6501/");
         }
 
         public async Task<TOut> PostJsonAsync<TOut, TIn>(string url, TIn model) {
