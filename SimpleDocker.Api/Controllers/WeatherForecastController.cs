@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace SimpleDocker.Api.Controllers {
+
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase {
