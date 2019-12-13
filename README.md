@@ -27,7 +27,7 @@ BaseAddress = new Uri("http://34.70.167.135:6500/");
 sizin Apiyi yayýnladýðýnýz sunucu olmasý gerekir.
 
 
-Docker CLI - Cheat Sheet (Kopya Kaðýdý)
+> Docker CLI - Cheat Sheet (Kopya Kaðýdý)
 
 Komut	Açýklamasý
 
