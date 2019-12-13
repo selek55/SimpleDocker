@@ -13,7 +13,7 @@ namespace SimpleDocker.Web.Data {
 
     public class MyClient : HttpClient {
         public MyClient() {
-            BaseAddress = new Uri("https://localhost:44338/");
+            BaseAddress = new Uri("https://localhost:5001/");
         }
 
         public async Task<TOut> PostJsonAsync<TOut, TIn>(string url, TIn model) {
@@ -32,10 +32,9 @@ namespace SimpleDocker.Web.Data {
     public class WeatherForecastService {
 
         public Task<WeatherForecast[]> GetForecastAsync() {
-            var httpClient = new MyClient();
-            return httpClient.GetJsonAsync<WeatherForecast[]>("WeatherForecast");
+            using (var httpClient = new MyClient()) {
+                return httpClient.GetJsonAsync<WeatherForecast[]>("WeatherForecast");
+            }
         }
     }
-
-
 }
