@@ -17,4 +17,4 @@ RUN dotnet publish "SimpleDocker.Web.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "SimpleDocker.Web.dll"]
+CMD ["dotnet", "SimpleDocker.Web.dll"]
