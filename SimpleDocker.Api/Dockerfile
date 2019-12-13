@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
 WORKDIR /src
-COPY ["SimpleDocker.Api/SimpleDocker.Api.csproj", "SimpleDocker.Api/"]
+COPY ["./SimpleDocker.Api.csproj", "SimpleDocker.Api/"]
 RUN dotnet restore "SimpleDocker.Api/SimpleDocker.Api.csproj"
 COPY . .
 WORKDIR "/src/SimpleDocker.Api"
